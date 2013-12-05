@@ -1,0 +1,12 @@
+# ~/.tmuxinator/deckjs.yml
+
+name: deckjs
+root: ~/projects/deckjs/
+
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - http-server -p 8000
+        - git st

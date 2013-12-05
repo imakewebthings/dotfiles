@@ -45,7 +45,7 @@ ZSH_THEME="muse"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew git-prompt colorize osx)
+plugins=(git brew git-prompt colorize osx tmux tmuxinator node npm nvm bundler gem rvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,7 +53,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -69,3 +69,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
