@@ -1,0 +1,11 @@
+# ~/.tmuxinator/meatmatch.yml
+
+name: meatmatch
+root: ~/projects/meatmatch
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - npm run tdd
+        - git st
