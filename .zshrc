@@ -45,16 +45,18 @@ ZSH_THEME="muse"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew git-prompt colorize osx tmux tmuxinator node npm nvm bundler gem rvm)
+plugins=(git brew colorize osx tmux tmuxinator node npm nvm bundler gem rvm vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export EDITOR='vim'
-
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+bindkey "jk" vi-cmd-mode
+set KEYTIMEOUT=10
 
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
