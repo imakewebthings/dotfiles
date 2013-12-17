@@ -37,7 +37,6 @@ if has("autocmd")
   autocmd BufWritePre *.js,*.css,*.scss,*.rb :call <SID>StripTrailingWhitespaces()
 endif
 
-noremap : <NOP>
 nnoremap <space> :
 inoremap jk <esc>
 nmap <silent> <c-k> :wincmd k<CR>
