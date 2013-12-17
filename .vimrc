@@ -9,9 +9,9 @@ set encoding=utf-8
 set fileencoding=utf-8
 set number
 
+filetype on
 filetype plugin on
 filetype indent on
-syntax on
 
 set splitbelow
 set autowrite
@@ -37,12 +37,21 @@ if has("autocmd")
   autocmd BufWritePre *.js,*.css,*.scss,*.rb :call <SID>StripTrailingWhitespaces()
 endif
 
+noremap : <NOP>
 nnoremap <space> :
 inoremap jk <esc>
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 set listchars=tab:▸\ ,eol:¬
 
@@ -55,3 +64,16 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'othree/html5.vim'
+NeoBundleCheck
+
+colorscheme solarized
+set background=dark
+syntax on
+
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
