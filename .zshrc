@@ -77,3 +77,8 @@ alias fuckoff="fuckoff.sh"
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+if (( $+commands[grc] )) && (( $+commands[brew] ))
+then
+  source `brew --prefix`/etc/grc.bashrc
+fi

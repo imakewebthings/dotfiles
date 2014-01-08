@@ -1,0 +1,16 @@
+# ~/.tmuxinator/tinyquestion.yml
+
+name: tinyquestion
+root: ~/projects/tinyquestion
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - git st
+        - npm run tdd
+  - lrps:
+      layout: even-horizontal
+      panes:
+        - npm start
+        - gulp

@@ -1,7 +1,7 @@
-# ~/.tmuxinator/deckjs.yml
+# ~/.tmuxinator/meatspace-chat.yml
 
-name: deckjs
-root: ~/projects/deckjs/
+name: meatspace-chat
+root: ~/projects/meatspace-chat/
 
 windows:
   - ide:
@@ -9,4 +9,4 @@ windows:
       panes:
         - vim
         - git st
-        - http-server -p 8000
+        - npm start

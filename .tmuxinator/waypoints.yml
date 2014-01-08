@@ -1,7 +1,7 @@
-# ~/.tmuxinator/deckjs.yml
+# ~/.tmuxinator/waypoints.yml
 
-name: deckjs
-root: ~/projects/deckjs/
+name: waypoints
+root: ~/projects/waypoints/
 
 windows:
   - ide:

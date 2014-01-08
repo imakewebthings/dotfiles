@@ -9,10 +9,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 set number
 
-filetype on
-filetype plugin on
-filetype indent on
-
 set splitbelow
 set autowrite
 set smartindent
@@ -20,6 +16,7 @@ set autoindent
 set ruler
 set wrapscan
 set backspace=2
+set so=5
 set colorcolumn=80
 set timeoutlen=500
 set incsearch
@@ -28,14 +25,14 @@ set smartcase
 set hlsearch
 set showcmd
 set wrap
-set textwidth=79
 
 set ts=2 sts=2 sw=2 expandtab
 if has("autocmd")
-  filetype on
   autocmd FileType make setlocal ts=2 sts=2 sw=2 noexpandtab
   autocmd BufWritePre *.js,*.css,*.scss,*.rb :call <SID>StripTrailingWhitespaces()
 endif
+
+let mapleader=","
 
 nnoremap <space> :
 inoremap jk <esc>
@@ -52,6 +49,9 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+:command! W w
+:command! Q q
+
 set listchars=tab:▸\ ,eol:¬
 
 function! <SID>StripTrailingWhitespaces()
@@ -66,13 +66,20 @@ endfunction
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'othree/html5.vim'
+NeoBundle 'Raimondi/delimitMate'
 NeoBundleCheck
 
 colorscheme solarized
 set background=dark
 syntax on
+filetype on
+filetype plugin on
+filetype indent on
 
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+let delimitMate_expand_cr = 1
+
+imap <expr> <TAB> emmet#expandAbbrIntelligent("\<tab>")
