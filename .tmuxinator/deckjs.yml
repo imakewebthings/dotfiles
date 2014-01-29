@@ -5,7 +5,7 @@ root: ~/projects/deckjs/
 
 windows:
   - ide:
-      layout: f352,272x62,0,0{84x62,0,0,4,187x62,85,0[187x30,85,0,5,187x31,85,31,6]}
+      layout: main-vertical
       panes:
         - vim
         - git st

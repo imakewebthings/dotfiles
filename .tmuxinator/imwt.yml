@@ -1,0 +1,11 @@
+# ~/.tmuxinator/imwt.yml
+
+name: imwt
+root: ~/projects/imakewebthings.github.com
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - git st
+        - jekyll serve -w

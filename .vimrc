@@ -68,8 +68,10 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundleCheck
 
 colorscheme solarized

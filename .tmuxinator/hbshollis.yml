@@ -1,0 +1,15 @@
+# ~/.tmuxinator/hbshollis.yml
+
+name: hbshollis
+root: ~/projects/hbshollis
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - git st
+        - guard 
+  - lrps:
+      layout: even-horizontal
+      panes:
+        - foreman start

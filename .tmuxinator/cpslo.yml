@@ -1,0 +1,10 @@
+# ~/.tmuxinator/cpslo.yml
+
+name: cpslo
+root: ~/projects/cpslo-catalog
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - git st
