@@ -1,0 +1,15 @@
+# ~/.tmuxinator/nodemeatcam.yml
+
+name: nodemeatcam
+root: ~/projects/node-meatcam
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - git st
+        - ssh
+  - lrps:
+      layout: even-vertical
+      panes:
+        - npm start

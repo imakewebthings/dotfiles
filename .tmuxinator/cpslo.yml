@@ -1,10 +1,20 @@
 # ~/.tmuxinator/cpslo.yml
 
 name: cpslo
-root: ~/projects/cpslo-catalog
+root: ~/projects/cpslo
 windows:
-  - ide:
+  - catalog:
       layout: main-vertical
       panes:
-        - vim
-        - git st
+        - cd catalog;vim
+        - cd catalog;git st
+  - api:
+      layout: main-vertical
+      panes:
+        - cd api;vim
+        - cd api;git st
+        - cd api;npm run tdd
+  - lrps:
+      layout: even-horizontal
+      panes:
+        - cd api;npm start

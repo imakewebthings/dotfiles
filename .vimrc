@@ -72,6 +72,9 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'chrisbra/csv.vim'
+NeoBundle 'digitaltoad/vim-jade'
 NeoBundleCheck
 
 colorscheme solarized
