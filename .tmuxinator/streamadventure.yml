@@ -1,0 +1,10 @@
+# ~/.tmuxinator/streamadventure.yml
+
+name: streamadventure
+root: ~/projects/streamadventure
+windows:
+  - everything:
+      layout: even-horizontal
+      panes:
+        - stream-adventure
+        - vim

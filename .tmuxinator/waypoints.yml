@@ -8,5 +8,5 @@ windows:
       layout: main-vertical
       panes:
         - vim
-        - git st
+        - gitsh
         - http-server -p 8000
