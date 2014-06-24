@@ -75,6 +75,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'chrisbra/csv.vim'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'git@github.com:othree/html5.vim.git'
 NeoBundleCheck
 
 colorscheme solarized
