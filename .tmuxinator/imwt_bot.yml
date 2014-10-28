@@ -1,0 +1,10 @@
+# ~/.tmuxinator/imwt_bot.yml
+
+name: imwt_bot
+root: ~/projects/imwt_bot
+
+windows:
+  - bot:
+      layout: main-vertical
+      panes:
+        - ruby ./run.rb

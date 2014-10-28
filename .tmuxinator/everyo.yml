@@ -1,0 +1,10 @@
+# ~/.tmuxinator/everyo.yml
+
+name: everyo
+root: ~/projects/everyo
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - git st

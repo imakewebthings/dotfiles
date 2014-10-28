@@ -1,0 +1,17 @@
+# ~/.tmuxinator/shariasource.yml
+
+name: shariasource
+root: ~/projects/shariasource
+windows:
+  - ide:
+      layout: even-horizontal
+      panes:
+        - vim
+        - clear
+        - guard 
+  - lrps:
+      layout: even-horizontal
+      panes:
+        - clear
+        - foreman start
+        - rake sunspot:solr:run

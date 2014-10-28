@@ -45,7 +45,7 @@ ZSH_THEME="muse"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew colorize osx tmux tmuxinator node npm nvm bundler gem rvm vi-mode)
+plugins=(git brew colorize osx tmux tmuxinator node npm nvm bundler gem rvm vim-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,9 +76,10 @@ alias fuckoff="fuckoff.sh"
 
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 if (( $+commands[grc] )) && (( $+commands[brew] ))
 then
   source `brew --prefix`/etc/grc.bashrc
 fi
+
+export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig

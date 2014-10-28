@@ -1,0 +1,11 @@
+# ~/.tmuxinator/syndeca.yml
+
+name: syndeca
+root: ~/projects/syndeca-viewer-web
+windows:
+  - ide:
+      layout: even-horizontal
+      panes:
+        - vim
+        - clear
+        - grunt server 

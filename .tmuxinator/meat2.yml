@@ -1,0 +1,12 @@
+# ~/.tmuxinator/meat2.yml
+
+name: meat2
+root: ~/projects/meatspace-chat-v2/
+
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - git st
+        - npm start

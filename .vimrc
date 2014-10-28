@@ -29,6 +29,8 @@ set wrap
 set ts=2 sts=2 sw=2 expandtab
 if has("autocmd")
   autocmd FileType make setlocal ts=2 sts=2 sw=2 noexpandtab
+  " Something is effing with vim-ruby, not highlighting Gemfiles
+  autocmd BufNewFile,BufRead Gemfile set filetype=ruby 
   autocmd BufWritePre *.js,*.css,*.scss,*.rb :call <SID>StripTrailingWhitespaces()
 endif
 
@@ -76,6 +78,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'chrisbra/csv.vim'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'git@github.com:othree/html5.vim.git'
+NeoBundle 'tpope/vim-liquid'
 NeoBundleCheck
 
 colorscheme solarized
