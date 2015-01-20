@@ -1,0 +1,11 @@
+# ~/.tmuxinator/pidrop.yml
+
+name: pidrop
+root: ~/projects/node-pi-drop
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - git st
+        - clear

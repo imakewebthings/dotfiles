@@ -79,6 +79,7 @@ NeoBundle 'chrisbra/csv.vim'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'git@github.com:othree/html5.vim.git'
 NeoBundle 'tpope/vim-liquid'
+NeoBundle 'groenewege/vim-less'
 NeoBundleCheck
 
 colorscheme solarized

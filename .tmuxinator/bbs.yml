@@ -1,0 +1,12 @@
+# ~/.tmuxinator/bbs.yml
+
+name: bbs
+root: ~/projects/bbs/
+
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - git st
+        - npm run dev
