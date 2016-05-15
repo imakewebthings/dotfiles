@@ -1,11 +1,12 @@
-# ~/.tmuxinator/pidrop.yml
+# ~/.tmuxinator/htptalk.yml
 
-name: pidrop
-root: ~/projects/pidrop
+name: htptalk
+root: ~/projects/htp-talk
+
 windows:
   - ide:
       layout: main-vertical
       panes:
         - vim
         - git st
-        - clear
+        - npm start

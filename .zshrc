@@ -52,7 +52,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export EDITOR='vim'
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
+export GOPATH='/Users/calebtroughton/go'
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:/usr/local/go/bin:$GOPATH/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 bindkey "jk" vi-cmd-mode
@@ -79,6 +80,12 @@ alias fuckoff="fuckoff.sh"
 if (( $+commands[grc] )) && (( $+commands[brew] ))
 then
   source `brew --prefix`/etc/grc.bashrc
+fi
+
+# Add GHC 7.10.1 to the PATH, via https://ghcformacosx.github.io/
+export GHC_DOT_APP="/Applications/ghc-7.10.1.app"
+if [ -d "$GHC_DOT_APP" ]; then
+  export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 
 export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting

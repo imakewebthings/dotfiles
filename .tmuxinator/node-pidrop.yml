@@ -1,7 +1,7 @@
-# ~/.tmuxinator/pidrop.yml
+# ~/.tmuxinator/node-pidrop.yml
 
-name: pidrop
-root: ~/projects/pidrop
+name: node-pidrop
+root: ~/projects/node-pidrop
 windows:
   - ide:
       layout: main-vertical

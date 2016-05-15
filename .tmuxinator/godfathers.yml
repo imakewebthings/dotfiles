@@ -1,0 +1,15 @@
+# ~/.tmuxinator/godfathers.yml
+
+name: godfathers
+root: ~/projects/godfathers
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - gitsh
+        - npm test
+  - lrps:
+      layout: even-horizontal
+      panes:
+        - http-server

@@ -1,0 +1,27 @@
+# ~/.tmuxinator/glitchmesh.yml
+
+name: glitchmesh
+root: ~/projects/
+
+windows:
+  - hub:
+      layout: even-horizontal
+      panes:
+        - cd glitchmesh-hub; vim
+        - cd glitchmesh-hub; git st
+  - pi:
+      layout: even-horizontal
+      panes:
+        - cd glitchmesh-pi; vim
+        - cd glitchmesh-pi; git st
+  - display:
+      layout: even-horizontal
+      panes:
+        - cd glitchmesh-display; vim
+        - cd glitchmesh-display; git st
+  - playground:
+      layout: even-horizontal
+      panes:
+        - cd glitchmesh-playground; vim
+        - cd glitchmesh-playground; git st
+        - cd glitchmesh-playground; npm start

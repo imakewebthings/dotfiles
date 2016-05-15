@@ -1,0 +1,12 @@
+# ~/.tmuxinator/autocomment.yml
+
+name: autocomment
+root: ~/projects/github-autocomment
+
+windows:
+  - ide:
+      layout: even-horizontal
+      panes:
+        - vim
+        - git st
+        - npm test
