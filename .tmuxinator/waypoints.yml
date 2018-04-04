@@ -8,9 +8,5 @@ windows:
       layout: main-vertical
       panes:
         - vim
-        - gitsh
         - npm run tdd
-  - lrps:
-      layout: horizontal
-      panes:
-        - http-server -p 8000
+        - gst

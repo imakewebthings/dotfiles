@@ -1,9 +1,9 @@
-if has('vim_starting')
+if &compatible
   set nocompatible
-  set runtimepath +=~/.vim/bundle/neobundle.vim/
 endif
+set runtimepath+=/Users/calebtroughton/dein.vim/repos/github.com/Shougo/dein.vim
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call dein#begin('/Users/calebtroughton/dein.vim')
 
 set encoding=utf-8
 set fileencoding=utf-8
@@ -76,31 +76,20 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'chrisbra/csv.vim'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'git@github.com:othree/html5.vim.git'
-NeoBundle 'tpope/vim-liquid'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'raichoo/haskell-vim'
-NeoBundle 'fatih/vim-go'
-NeoBundleCheck
+call dein#add('Shougo/dein.vim')
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('Raimondi/delimitMate')
+call dein#add('sheerun/vim-polyglot')
+call dein#end()
+
+if dein#check_install()
+  call dein#install()
+endif
 
 colorscheme solarized
 set background=dark
 syntax on
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -110,5 +99,3 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 let delimitMate_expand_cr = 1
-
-au FileType html imap <expr> <TAB> emmet#expandAbbrIntelligent("\<tab>")

@@ -1,0 +1,11 @@
+# ~/.tmuxinator/inquire.yml
+
+name: inquire
+root: ~/go/src/github.com/imakewebthings/inquire
+windows:
+  - ide:
+      layout: main-vertical
+      panes:
+        - vim
+        - gst
+        - ls *.go | entr go test
